@@ -39,7 +39,7 @@ CData$activity <- factor(CData$activity, levels = activityName[,1], labels = act
 names(CData) <- gsub("^t", "time", names(CData))
 #switch char "f" to word "frequence"
 names(CData) <- gsub("^f", "frequence", names(CData))
-#swutch "-Std" to " standard deviation"
+#swutch "-std" to " standard deviation"
 names(CData) <- gsub("-std", " standard deviation", names(CData))
 #####
 # 5. From the data set in step 4, creates a second, independent tidy data set with the average of each variable for each activity and each subject.
