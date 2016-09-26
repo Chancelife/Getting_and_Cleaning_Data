@@ -25,7 +25,7 @@ testData <- cbind(test.subject, test.y, test.x)
 CData <- rbind(trainData, testData)
 #####
 # 2. Extract only the measurements on the mean and standard deviation for each measurement. 
-features <- read.table("./data/UCI HAR Dataset/features.txt")[,2]
+features <- read.table("./data/UCI HAR Dataset/features.txt", stringsAsFactors = FALSE)[,2]
 findexes <- grep(("mean\\(\\)|std\\(\\)"), features)
 CData <- CData[, c(1, 2, findexes+2)]
 colnames(CData) <- c("subject", "activity", features[findexes])
