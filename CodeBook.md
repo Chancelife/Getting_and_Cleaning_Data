@@ -10,9 +10,9 @@
 ####Step 3:
   Read activityName from activity_labels.txt, change numbers in activity column to descriptive names from labels we got.
 ####Step 4:
-  +switch char "t" to word "time"
-  +switch char "f" to word "frequence"
-  +switch "-std" to " standard deviation"
+  switch char "t" to word "time"
+  switch char "f" to word "frequence"
+  switch "-std" to " standard deviation"
 ####Step 5:
   Select subject and activity as subset from our full data set, calc average, write table as output
 
