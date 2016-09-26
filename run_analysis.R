@@ -10,7 +10,7 @@ download.file(DataUrl, destfile = "./data/getcleanData.zip")
 # 0.2: unzip
 listZip <- unzip("./data/getcleanData.zip", exdir = "./data")
 
-# 0.3: read data
+# 0.3: reading data
 train.x <- read.table("./data/UCI HAR Dataset/train/X_train.txt")
 train.y <- read.table("./data/UCI HAR Dataset/train/y_train.txt")
 train.subject <- read.table("./data/UCI HAR Dataset/train/subject_train.txt")
@@ -33,7 +33,6 @@ colnames(CData) <- c("subject", "activity", features[findexes])
 # 3. Use descriptive activity names to name the activities in the data set
 activityName <- read.table("./data/UCI HAR Dataset/activity_labels.txt")
 CData$activity <- factor(CData$activity, levels = activityName[,1], labels = activityName[,2])
-#CData
 #####
 # 4. Appropriately labels the data set with descriptive variable names.
 #switch char "t" to word "time"
